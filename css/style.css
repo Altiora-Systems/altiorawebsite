@@ -683,6 +683,7 @@ body::before {
     justify-content: flex-start;
     position: relative;
     overflow: hidden;
+    flex-wrap: wrap;
 }
 
 .solutions-section::before {
@@ -715,6 +716,8 @@ body::before {
     position: relative;
     overflow: hidden;
     animation: fadeInUp 0.8s ease-out both;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 /* Blue top line for solution cards */
