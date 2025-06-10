@@ -673,33 +673,29 @@ body::before {
 
 /* Solutions Section */
 .solutions-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+    overflow: hidden;
     padding: 100px 80px;
     background: linear-gradient(180deg, 
         rgba(248, 250, 252, 0.8) 0%, 
         rgba(255, 255, 255, 0.95) 50%,
         rgba(248, 250, 252, 0.8) 100%);
-    display: flex;
-    gap: 32px;
-    justify-content: flex-start;
-    position: relative;
-    overflow: hidden;
-    flex-wrap: wrap;
-}
-
-.solutions-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 70% 30%, rgba(163, 213, 244, 0.05) 0%, transparent 60%);
-    pointer-events: none;
 }
 
 .solution-card {
-    width: clamp(300px, 45vw, 628px); /* Fluid width */
-    height: 180px;
+    flex: 1 1 0;
+    min-width: 320px;
+    max-width: 48%;
+    box-sizing: border-box;
+    width: auto;
+    height: 100%;
+    min-height: 220px;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     border-radius: 20px;
@@ -1019,12 +1015,15 @@ body::before {
         flex-direction: column;
         padding: 60px 40px;
         gap: 24px;
+        align-items: stretch;
     }
     
     .solution-card {
+        max-width: 100%;
         width: 100%;
-        max-width: 600px;
         margin: 0 auto;
+        height: auto;
+        min-height: 180px;
     }
 }
 
