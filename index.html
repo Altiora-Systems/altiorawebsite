@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; connect-src 'self';">
+    
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Medino:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair Display:wght@400&display=swap" />
+    
+    <title>Altiora Systems</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Altiora Systems connects people, places, and possibilities through innovative technology solutions for Caribbean logistics and shipping.">
+    <meta name="keywords" content="Caribbean logistics, shipping technology, BarrelLink, AltioraConnect, diaspora shipping">
+    <meta name="author" content="Altiora Systems">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Altiora Systems - Connecting People, Places, and Possibilities">
+    <meta property="og:description" content="Innovative technology solutions for Caribbean logistics and shipping.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://altiorasystems.com">
+    <meta property="og:image" content="./assets/images/AltioraSystems_NoText.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Altiora Systems - Connecting People, Places, and Possibilities">
+    <meta name="twitter:description" content="Innovative technology solutions for Caribbean logistics and shipping.">
+    <meta name="twitter:image" content="./assets/images/AltioraSystems_NoText.png">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Altiora Systems",
+        "url": "https://altiorasystems.com",
+        "logo": "./assets/images/AltioraSystems_NoText.png",
+        "description": "Altiora Systems reimagines how families and businesses ship goods across the Caribbean through innovative technology solutions.",
+        "foundingDate": "2023",
+        "industry": "Technology, Logistics",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Caribbean"
+        },
+        "sameAs": [
+            "https://www.facebook.com/profile.php?id=61576034007072",
+            "https://x.com/BarrelLinkApp",
+            "https://www.linkedin.com/company/altiora-systems",
+            "https://www.instagram.com/barrellinkapp/"
+        ],
+        "products": [
+            {
+                "@type": "SoftwareApplication",
+                "name": "BarrelLink",
+                "description": "B2C shipping marketplace for diaspora families to book, compare, and track barrel shipments",
+                "url": "https://www.barrellink.com"
+            },
+            {
+                "@type": "SoftwareApplication", 
+                "name": "Altiora Connect",
+                "description": "B2B SaaS platform for Caribbean logistics providers",
+                "url": "https://altioraconnect.barrellink.com"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Register Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('Service Worker registered:', reg.scope))
+                    .catch(err => console.error('Service Worker registration failed:', err));
+            });
+        }
+    </script>
+
+    <style>
+    /* Critical CSS for initial render */
+    body {
+        font-family: 'Inter', Arial, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #475569 75%, #64748b 100%);
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    .header {
+        width: 100%;
+        height: 90px;
+        background: rgba(255, 255, 255, 0.98);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(163, 213, 244, 0.2);
+    }
+    .container {
+        width: 100%;
+        position: relative;
+    }
+    .footer {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    </style>
+</head>
+<body>
+    <div class="homepage">
+        <div class="container">
+            <!-- Header Section -->
+            <div class="header">
+                <a href="index.html" class="logo-link">
+                    <div class="logo-section">
+                        <img class="logo-icon" src="assets/images/AltioraSystems_NoText.png" alt="Altiora Systems Logo">
+                        <div class="brand-text">
+                            <div class="altiora">ALTIORA</div>
+                            <div class="systems">SYSTEMS</div>
+                        </div>
+                    </div>
+                </a>
+                <div class="nav-section">
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61576034007072" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/facebook.svg" alt="Facebook" class="social-icon">
+                        </a>
+                        <a href="https://x.com/BarrelLinkApp" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/twitter.svg" alt="Twitter" class="social-icon">
+                        </a>
+                        <a href="https://www.linkedin.com/company/altiora-systems" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+                        </a>
+                        <a href="https://www.instagram.com/barrellinkapp/" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/instagram.svg" alt="Instagram" class="social-icon">
+                        </a>
+                    </div>
+                    <div class="nav-links">
+                        <a href="about.html" class="nav-link-anchor"><div class="nav-link secondary">About</div></a>
+                        <a href="contact.html" class="nav-link-anchor"><div class="nav-link secondary">Contact</div></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Connecting People, Places, and Possibilities through Technology</h1>
+                    <a href="about.html" class="cta-link">
+                        <div class="cta-button">
+                            <span class="cta-text">Learn More</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Solutions Section -->
+            <div class="solutions-section">
+                <a href="about.html#our-products" class="solution-link">
+                    <div class="solution-card">
+                        <h2 class="card-title">Our Solutions</h2>
+                        <p class="card-description">We provide innovative technology products<br>and services to empower communities.</p>
+                    </div>
+                </a>
+                <a href="contact.html" class="solution-link">
+                    <div class="solution-card">
+                        <h2 class="card-title">Get Started</h2>
+                        <p class="card-description">Partner with us and build solutions in a collaborative environment.</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Footer -->
+            <div class="footer">
+                <div class="footer-text">© 2025 Altiora Systems. All rights reserved.</div>
+            </div>
+        </div>
+        
+        <!-- Floating Scroll Indicator -->            <div class="scroll-indicator"></div>
+    </div>
+    
+    <!-- Enhanced JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
