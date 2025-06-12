@@ -477,35 +477,38 @@ body::before {
     padding: 0 80px;
     position: relative;
     overflow: hidden;
+    min-height: 520px; /* Ensure enough height for vertical centering */
 }
 
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, 
-        rgba(10, 31, 47, 0.1) 0%, 
-        rgba(163, 213, 244, 0.05) 25%,
-        rgba(255, 255, 255, 0.1) 50%,
-        rgba(163, 213, 244, 0.05) 75%,
-        rgba(10, 31, 47, 0.1) 100%);
-    pointer-events: none;
-    animation: heroGradientShift 8s ease-in-out infinite;
+.hero-content {
+    max-width: 700px; /* Slightly wider than solution cards */
+    min-width: 380px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 48px; /* More padding for a wider card */
+    border-radius: 20px;
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08), 
+                0px 4px 16px rgba(163, 213, 244, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(163, 213, 244, 0.2);
+    z-index: 10;
+    animation: fadeInUp 1s ease-out;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.hero-section::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 30% 70%, rgba(163, 213, 244, 0.15) 0%, transparent 50%);
-    pointer-events: none;
-    animation: heroParticles 12s ease-in-out infinite;
+@media (max-width: 900px) {
+    .hero-content {
+        max-width: 95vw;
+        padding: 32px 16px;
+    }
 }
 
 @keyframes heroGradientShift {
