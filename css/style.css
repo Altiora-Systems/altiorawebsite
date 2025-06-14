@@ -683,19 +683,20 @@ body::before {
 
 /* Solutions Section */
 .solutions-section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 32px;
-    justify-content: center;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr; /* Default to stacking on smaller screens */
+    gap: 40px;
+    padding: 80px 48px;
+    justify-items: center;
+    align-items: flex-start;
     position: relative;
-    overflow: hidden;
-    padding: 100px 80px;
-    background: linear-gradient(180deg, 
-        rgba(248, 250, 252, 0.8) 0%, 
-        rgba(255, 255, 255, 0.95) 50%,
-        rgba(248, 250, 252, 0.8) 100%);
+    z-index: 2;
+}
+
+@media (min-width: 600px) {
+    .solutions-section {
+        grid-template-columns: 1fr 1fr; /* Two columns for screens wider than 600px */
+    }
 }
 
 .solution-card {
@@ -1003,7 +1004,7 @@ body::before {
     }
     
     .solutions-section {
-        padding: 80px 60px;
+        padding: 60px 32px;
     }
     
     .solution-card {
